@@ -17,7 +17,14 @@ def move(my_history, their_history, my_score, their_score):
     Make my move.
     Returns 'c' or 'b'. 
     '''
-
+if (my_history = = '' and their history = = '' and my_score = = 0 and their_score = = 0):
+    return 'c' 
+if (my_history = = 'c' and their history = = 'b'):
+    return 'b'
+if (my_history = = 'b' and their history = = 'c'):
+    return 'c'
+else:
+    return 'b' 
     # my_history: a string with one letter (c or b) per round that has been played with this opponent.
     # their_history: a string of the same length as history, possibly empty. 
     # The first round between these two players is my_history[0] and their_history[0].
@@ -65,4 +72,22 @@ if __name__ == '__main__':
               # move('bbb', 'ccc', 0, 0) returns 'b'.
               my_score=0, 
               their_score=0,
-              result='b')             
+              result='b')    
+    if test_move(my_history='',
+              their_history='', 
+              my_score=0,
+              their_score=0,
+              result='c'):
+        Print 'Test Passed'
+         if test_move(my_history='c',
+              their_history='b', 
+             result='b'):
+        Print 'Test Passed'
+         if test_move(my_history='b',
+              their_history='c', 
+             result='b'):
+        Print 'Test Passed'
+  # Player always betrays 
+if player = = 0: 
+    if len(opponent_history) = = 0 # first round: collude
+    return 'b'
